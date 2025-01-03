@@ -1,0 +1,89 @@
+body {
+    background-color: #E0FFFF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: #4d4d33;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1;
+    color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 110% auto;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.image-display, .qr-section {
+    margin-top: 20px;
+}
+
+.qr-section h2,
+.image-display h2 {
+    font-size: 1.2em;
+    color: #e6ffe6;
+    margin-bottom: 10px;
+}
+
+.button-53 {
+    background-color: #b3ffb3;
+    border: none;
+    color: #000;
+    font-weight: 500;
+    padding: 0.75rem 1.65rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 200px;
+    max-width: 460px;
+    margin: 10px auto;
+    transform: rotate(-2deg);
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-53:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    max-width: 460px;
+    margin: 10px auto;
+    padding: 0.75rem 1.65rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

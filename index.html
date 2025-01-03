@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script>
+        function resetPage() {
+            document.querySelector('.image-display').style.display = 'none';
+            document.querySelector('.qr-section').style.display = 'none';
+            document.querySelector('input[type="file"]').value = '';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate QR Code</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit" class="button-53">Generate QR Code</button>
+        </form>
+
+        {% if filename %}
+            <div class="image-display">
+                <h2>Uploaded Image:</h2>
+                <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image" width="200">
+            </div>
+            <div class="qr-section">
+                <h2>SCAN ME</h2>
+                <img src="{{ url_for('qr_file', filename=qr_code) }}" alt="QR Code" width="200">
+                <br>
+                <a href="{{ url_for('qr_file', filename=qr_code) }}" class="button-53" download="qr_code.png">Download QR Code</a>
+            </div>
+            <button onclick="resetPage()" class="button-53">Generate Another QR Code</button>
+        {% endif %}
+    </div>
+</body>
+</html>
